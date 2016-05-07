@@ -27,7 +27,7 @@
                 <feature:enabled feature="ShowAttributions">
                 <li class="fieldcontain">
                    <span id="attribution-label" class="property-label">Attribution</span>
-                   <div class="property-value" aria-labelledby="attribution-label"></div>
+                   <div class="property-value" aria-labelledby="attribution-label">${this.quote?.attribution}</div>
                </li>
                </feature:enabled>
             </ol>

@@ -12,11 +12,15 @@ class QuoteSpec extends Specification {
     def setup() {
     }
 
-    def cleanup() {
+    def "test for valid quote text"() {
+       when: 'text is empty'
+       def p = new Quote(text: '')
+
+       then: 'validation should fail'
+       !p.validate()
+
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    def cleanup() {
     }
 }

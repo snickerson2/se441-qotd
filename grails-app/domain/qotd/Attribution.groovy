@@ -6,4 +6,12 @@ class Attribution {
     static constraints = {
         name nullable: false
     }
+
+    int length() {
+       name.length()
+    }
+    
+    String getName() {
+       name
+    }
 }
