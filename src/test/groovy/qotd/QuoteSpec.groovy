@@ -19,6 +19,17 @@ class QuoteSpec extends Specification {
        then: 'validation should fail'
        !p.validate()
 
+       when: 'text is null'
+       def q = new Quote(text: null)
+
+       then: 'validation should fail'
+       !q.validate()
+
+       when: 'text is legal'
+       def r = new Quote(text: 'Ayeeeeeee')
+
+       then: 'validation should succeed'
+       r.validate()
     }
 
     def cleanup() {
